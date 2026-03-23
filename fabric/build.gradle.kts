@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.fabric.permissions.api)
-    modInclude(libs.fabric.permissions.api)
+    //implementation(libs.fabric.permissions.api) TODO
+    //modInclude(libs.fabric.permissions.api)
 }
 
 multimod.fabric(project(":common"))

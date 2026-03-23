@@ -1,6 +1,5 @@
 package xyz.eclipseisoffline.commonpermissionsapi.fabric.impl;
 
-import me.lucko.fabric.api.permissions.v0.Permissions;
 import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
@@ -26,6 +25,7 @@ public final class CommonPermissionsFabricImpl implements CommonPermissions, Pre
     @Override
     public TriState getPermissionValue(ServerPlayer player, CommonPermissionNode node) {
         String permissionString = node instanceof FabricPermissionNode fabricNode ? fabricNode.node() : FabricPermissionNode.nodeToPermissionString(node.identifier());
-        return Permissions.getPermissionValue(player, permissionString);
+        //return Permissions.getPermissionValue(player, permissionString);
+        return TriState.DEFAULT;
     }
 }

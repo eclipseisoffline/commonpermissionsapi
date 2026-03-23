@@ -1,0 +1,27 @@
+license="MIT"
+issueTrackerURL="https://github.com/${github_repository}/issues"
+
+[[mods]]
+modId="${mod_id}"
+version="${version}"
+displayName="${mod_name}"
+displayURL="https://github.com/${github_repository}"
+authors="eclipseisoffline"
+description='''${mod_description}'''
+
+[[mixins]]
+config="mod-template.mixins.json"
+
+[[dependencies]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neoforge_version}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies]]
+    modId="minecraft"
+    type="required"
+    versionRange="${neoforge_minecraft_version}"
+    ordering="NONE"
+    side="BOTH"

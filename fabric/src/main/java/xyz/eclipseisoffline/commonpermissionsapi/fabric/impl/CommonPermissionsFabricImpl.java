@@ -13,11 +13,9 @@ import xyz.eclipseisoffline.commonpermissionsapi.impl.CommonPermissionsImpl;
 @ApiStatus.Internal
 public final class CommonPermissionsFabricImpl implements CommonPermissions, PreLaunchEntrypoint {
 
-    private CommonPermissionsFabricImpl() {}
-
     @Override
     public void onPreLaunch() {
-        CommonPermissionsImpl.setImplementation(new CommonPermissionsFabricImpl());
+        CommonPermissionsImpl.setImplementation(this);
     }
 
     @Override

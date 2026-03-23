@@ -10,7 +10,7 @@ authors="eclipseisoffline"
 description='''${mod_description}'''
 
 [[mixins]]
-config="mod-template.mixins.json"
+config="commonpermissionsapi-neoforge.mixins.json"
 
 [[dependencies]]
     modId="neoforge"

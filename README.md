@@ -5,6 +5,8 @@
 
 common-permissions-api is a library to abstract between Fabric's and NeoForge's permissions APIs.
 
+**Please note that the Fabric implementation is currently not functional, pending a functional permission API on Minecraft 26.1.**
+
 Artefacts are available at [maven.eclipseisoffline.xyz](https://maven.eclipseisoffline.xyz).
 
 ## Usage

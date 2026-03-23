@@ -20,16 +20,14 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "xyz.eclipseisoffline.commonpermissionsapi.fabric.CommonPermissionsApiFabric"
+    "preLaunch": [
+      "xyz.eclipseisoffline.commonpermissionsapi.fabric.impl.CommonPermissionsFabricImpl"
     ]
   },
-  "mixins": [
-    "common-permissions-api.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "fabric-permissions-api-v0": "*"
   }
 }

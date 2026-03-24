@@ -19,15 +19,11 @@
   },
   "license": "MIT",
   "environment": "*",
-  "entrypoints": {
-    "preLaunch": [
-      "xyz.eclipseisoffline.commonpermissionsapi.fabric.impl.CommonPermissionsFabricImpl"
-    ]
-  },
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
-    "fabric-api": ">=${fabric_api_version}",
-    "minecraft": "${minecraft_version}",
+    "minecraft": "${minecraft_version}"
+  },
+  "recommends": {
     "fabric-permissions-api-v0": "*"
   }
 }

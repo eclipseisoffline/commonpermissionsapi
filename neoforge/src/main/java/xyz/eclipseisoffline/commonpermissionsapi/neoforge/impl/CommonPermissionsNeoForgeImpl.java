@@ -3,7 +3,6 @@ package xyz.eclipseisoffline.commonpermissionsapi.neoforge.impl;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.TriState;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.server.permission.PermissionAPI;
 import net.neoforged.neoforge.server.permission.events.PermissionGatherEvent;
@@ -12,14 +11,12 @@ import org.jetbrains.annotations.ApiStatus;
 import org.jspecify.annotations.Nullable;
 import xyz.eclipseisoffline.commonpermissionsapi.api.CommonPermissionNode;
 import xyz.eclipseisoffline.commonpermissionsapi.api.CommonPermissions;
-import xyz.eclipseisoffline.commonpermissionsapi.impl.CommonPermissionsImpl;
 import xyz.eclipseisoffline.commonpermissionsapi.neoforge.mixin.PermissionAPIAccessor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @ApiStatus.Internal
-@Mod("commonpermissionsapi")
 public final class CommonPermissionsNeoForgeImpl implements CommonPermissions {
     private final List<NeoForgePermissionNode> nodesToRegister = new ArrayList<>();
     private boolean nodesHaveBeenRegistered = false;
@@ -31,7 +28,6 @@ public final class CommonPermissionsNeoForgeImpl implements CommonPermissions {
                     .forEach(event::addNodes);
             nodesHaveBeenRegistered = true;
         });
-        CommonPermissionsImpl.setImplementation(this);
     }
 
     @Override

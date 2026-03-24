@@ -23,13 +23,13 @@ repositories {
 
 dependencies {
     // For your common module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-common:0.0.1-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-common:0.0.2-26.1")
     
     // For your Fabric module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-fabric:0.0.1-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-fabric:0.0.2-26.1")
     
     // For your NeoForge module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-neoforge:0.0.1-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-neoforge:0.0.2-26.1")
 }
 ```
 
@@ -47,7 +47,7 @@ multimod {
     }
 
     sharedDependencies {
-        multiModInclude(multiModImplementation("xyz.eclipseisoffline:commonpermissionsapi:0.0.1-26.1"))
+        multiModInclude(multiModImplementation("xyz.eclipseisoffline:commonpermissionsapi:0.0.2-26.1"))
     }
 }
 ```
@@ -68,11 +68,9 @@ And in your `neoforge.mods.toml`:
 [[dependencies]]
     modId="commonpermissionsapi"
     type="required"
-    ordering="AFTER"
+    ordering="NONE"
     side="BOTH"
 ```
-
-An ordering of `AFTER` is important here.
 
 Once you've done that, you can use the library in your code. Create `CommonPermissionNode`s using `CommonPermissions#node`,
 and then you can check for these nodes using the other methods in `CommonPermissions`.

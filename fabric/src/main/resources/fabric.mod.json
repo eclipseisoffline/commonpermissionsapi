@@ -13,9 +13,9 @@
     }
   ],
   "contact": {
-    "homepage": "https://github.com/${github_repository}",
-    "issues": "https://github.com/${github_repository}/issues",
-    "sources": "https://github.com/${github_repository}"
+    "homepage": "https://github.com/eclipseisoffline/commonpermissionsapi",
+    "issues": "https://github.com/eclipseisoffline/commonpermissionsapi/issues",
+    "sources": "https://github.com/eclipseisoffline/commonpermissionsapi"
   },
   "license": "MIT",
   "environment": "*",
@@ -23,5 +23,12 @@
     "fabricloader": ">=${fabric_loader_version}",
     "minecraft": "${minecraft_version}",
     "fabric-permissions-api-v0": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": [
+        "library"
+      ]
+    }
   }
 }

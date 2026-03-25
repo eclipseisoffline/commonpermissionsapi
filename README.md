@@ -5,8 +5,6 @@
 
 common-permissions-api is a library to abstract between Fabric's and NeoForge's permissions APIs.
 
-**Please note that the Fabric implementation is currently not functional, pending a functional permission API on Minecraft 26.1.**
-
 Artefacts are available at [maven.eclipseisoffline.xyz](https://maven.eclipseisoffline.xyz).
 
 ## Usage
@@ -23,13 +21,13 @@ repositories {
 
 dependencies {
     // For your common module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-common:0.0.3-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-common:0.1.0-26.1")
     
     // For your Fabric module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-fabric:0.0.3-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-fabric:0.1.0-26.1")
     
     // For your NeoForge module:
-    implementation("xyz.eclipseisoffline:commonpermissionsapi-neoforge:0.0.3-26.1")
+    implementation("xyz.eclipseisoffline:commonpermissionsapi-neoforge:0.1.0-26.1")
 }
 ```
 
@@ -47,7 +45,7 @@ multimod {
     }
 
     sharedDependencies {
-        multiModInclude(multiModImplementation("xyz.eclipseisoffline:commonpermissionsapi:0.0.3-26.1"))
+        multiModInclude(multiModImplementation("xyz.eclipseisoffline:commonpermissionsapi:0.1.0-26.1"))
     }
 }
 ```

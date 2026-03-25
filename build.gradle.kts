@@ -14,10 +14,11 @@ multimod {
 
     minecraft {
         minecraft = libs.minecraft
-        supportedMinecraftVersions = ">=26.1-pre.1"
+        supportedMinecraftVersions = ">=26.1"
         neoForgeSupportedMinecraftVersions = "26.1"
     }
 
+    fabricApi = libs.fabric.api
     neoForgeVersion = libs.versions.neoforge
 
     publishing {

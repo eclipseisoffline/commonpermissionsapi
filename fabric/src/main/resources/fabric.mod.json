@@ -21,9 +21,7 @@
   "environment": "*",
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
-    "minecraft": "${minecraft_version}"
-  },
-  "recommends": {
+    "minecraft": "${minecraft_version}",
     "fabric-permissions-api-v0": "*"
   }
 }

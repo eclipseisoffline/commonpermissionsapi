@@ -12,21 +12,6 @@ multimod {
 
     archivesBaseName = properties["archives_base_name"] as String
 
-    // TODO remove when NeoForge finishes 26.2
-    settings {
-        repositories {
-            maven {
-                name = "Maven for PR #3198" // https://github.com/neoforged/NeoForge/pull/3198
-                url = uri("https://prmaven.neoforged.net/NeoForge/pr3198")
-                content {
-                    includeModule("net.neoforged", "neoforge")
-                    includeModule("net.neoforged", "testframework")
-                }
-            }
-        }
-    }
-    // TODO end
-
     minecraft {
         minecraft = libs.minecraft
         supportedMinecraftVersions = ">=26.2"

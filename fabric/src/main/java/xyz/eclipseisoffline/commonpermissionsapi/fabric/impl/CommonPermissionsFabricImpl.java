@@ -1,10 +1,10 @@
 package xyz.eclipseisoffline.commonpermissionsapi.fabric.impl;
 
-import me.lucko.fabric.api.permissions.v0.Permissions;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.TriState;
 import org.jetbrains.annotations.ApiStatus;
+import org.jspecify.annotations.Nullable;
 import xyz.eclipseisoffline.commonpermissionsapi.api.CommonPermissionNode;
 import xyz.eclipseisoffline.commonpermissionsapi.api.CommonPermissions;
 
@@ -18,15 +18,11 @@ public final class CommonPermissionsFabricImpl implements CommonPermissions {
 
     @Override
     public TriState getPermissionValue(ServerPlayer player, CommonPermissionNode node) {
-        String permissionString = node instanceof FabricPermissionNode fabricNode ? fabricNode.node() : FabricPermissionNode.nodeToPermissionString(node.identifier());
-        return fabricTriStateToMinecraft(Permissions.getPermissionValue(player, permissionString));
+        FabricPermissionNode permissionNode = node instanceof FabricPermissionNode fabricNode ? fabricNode : new FabricPermissionNode(node.identifier());
+        return booleanToTriState(player.getPermissionContext().checkPermission(permissionNode.node()));
     }
 
-    private static TriState fabricTriStateToMinecraft(net.fabricmc.fabric.api.util.TriState triState) {
-        return switch (triState) {
-            case FALSE -> TriState.FALSE;
-            case DEFAULT -> TriState.DEFAULT;
-            case TRUE -> TriState.TRUE;
-        };
+    private static TriState booleanToTriState(@Nullable Boolean bool) {
+        return bool == null ? TriState.DEFAULT : TriState.from(bool);
     }
 }

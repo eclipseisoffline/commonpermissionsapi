@@ -5,7 +5,7 @@ pluginManagement {
 
         maven {
             name = "eclipseisoffline"
-            url = uri("https://maven.eclipseisoffline.xyz/releases")
+            url = uri("https://maven.eclipseisoffline.xyz/snapshots")
         }
 
         maven {

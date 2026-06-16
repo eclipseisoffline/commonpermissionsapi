@@ -21,11 +21,11 @@ public final class CommonPermissionsImpl {
         if (implementation == null) {
             try {
                 implementation = (CommonPermissions) Class.forName(FABRIC_IMPLEMENTATION).getConstructor().newInstance();
-                LOGGER.info("Using Fabric implementation");
+                LOGGER.debug("Using Fabric implementation");
             } catch (ClassNotFoundException | InvocationTargetException | InstantiationException | IllegalAccessException | NoSuchMethodException fabricException) {
                 try {
                     implementation = (CommonPermissions) Class.forName(NEOFORGE_IMPLEMENTATION).getConstructor().newInstance();
-                    LOGGER.info("Using NeoForge implementation");
+                    LOGGER.debug("Using NeoForge implementation");
                 } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | ClassNotFoundException neoforgeException) {
                     throw new IllegalStateException("No CommonPermissions implementation found");
                 }
